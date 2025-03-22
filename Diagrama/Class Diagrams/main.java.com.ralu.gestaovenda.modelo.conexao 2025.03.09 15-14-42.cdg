@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.ralu.gestaovenda.modelo.conexao">
+  <ClassDiagramComponents>
+    <Class name="ConexaoMysql" package="com.ralu.gestaovenda.modelo.conexao" visibility="public" xPosition="20.0" yPosition="183.0">
+      <Fields>
+        <Field name="connection" type="Connection" visibility="private"/>
+        <Field name="URL" type="String" visibility="private" isFinal="true"/>
+        <Field name="USER" type="String" visibility="private" isFinal="true"/>
+        <Field name="PASSWORD" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="obterConexao" returnType="Connection" visibility="public"/>
+        <Method name="fecharConexao" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConexaoPostgres" package="com.ralu.gestaovenda.modelo.conexao" visibility="public" xPosition="310.0" yPosition="9.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="obterConexao" returnType="Connection" visibility="public"/>
+        <Method name="fecharConexao" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Conexao" package="com.ralu.gestaovenda.modelo.conexao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="obterConexao" returnType="Connection" visibility="public"/>
+        <Method name="fecharConexao" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ralu.gestaovenda.modelo.conexao.ConexaoPostgres" target="com.ralu.gestaovenda.modelo.conexao.Conexao"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ralu.gestaovenda.modelo.conexao.ConexaoMysql" target="com.ralu.gestaovenda.modelo.conexao.Conexao"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

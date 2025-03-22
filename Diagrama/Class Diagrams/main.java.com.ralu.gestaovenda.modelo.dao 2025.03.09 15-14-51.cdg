@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.ralu.gestaovenda.modelo.dao">
+  <ClassDiagramComponents>
+    <Class name="AutenticacaoDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="temPermissao" returnType="boolean" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="permissao" returnType="void" visibility="private">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="login" returnType="Usuario" visibility="public">
+          <Argument type="LoginDto" name="login"/>
+        </Method>
+        <Method name="validaSenha" returnType="boolean" visibility="private">
+          <Argument type="String" name="usuarioSenha"/>
+          <Argument type="String" name="loginSenha"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoriaDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="544.0" yPosition="396.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="todasCategorias" returnType="List&lt;Categoria&gt;" visibility="public"/>
+        <Method name="buscarCategoriaPeloId" returnType="Categoria" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarCategoriaPeloNome" returnType="Categoria" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="deleteCategoriaPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getCategoria" returnType="Categoria" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="482.0" yPosition="20.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="registar" returnType="String" visibility="private">
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="todosCliente" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="buscarClientePeloId" returnType="Cliente" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarUltimoCliente" returnType="Cliente" visibility="public"/>
+        <Method name="getCliente" returnType="Cliente" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="deleteClientePeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProdutoDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="1045.0" yPosition="20.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="actualizarQuantidade" returnType="String" visibility="public">
+          <Argument type="Long" name="idProduto"/>
+          <Argument type="Integer" name="quantidade"/>
+          <Argument type="Long" name="usuarioId"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="todosProdutos" returnType="List&lt;Produto&gt;" visibility="public"/>
+        <Method name="buscarProdutoPeloId" returnType="Produto" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarProdutosPeloCategoria" returnType="List&lt;Produto&gt;" visibility="public">
+          <Argument type="String" name="categoria"/>
+        </Method>
+        <Method name="buscarProdutoPeloNome" returnType="Produto" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="deletaProdutoPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="8.0" yPosition="396.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="todosUsuarios" returnType="List&lt;Usuario&gt;" visibility="public"/>
+        <Method name="getUsuario" returnType="Usuario" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="buscarUsuarioPeloId" returnType="Usuario" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarUsuarioPeloUsername" returnType="Usuario" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="deleteUsuarioPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="actualizarUltimoLogin" returnType="void" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="1603.0" yPosition="20.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+        <Field name="produtoDao" type="ProdutoDao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="adicionarVendaItem" returnType="void" visibility="private">
+          <Argument type="VendaDetalhes" name="vendaDetalhes"/>
+        </Method>
+        <Method name="editarVendaItem" returnType="void" visibility="private">
+          <Argument type="VendaDetalhes" name="vendaDetalhes"/>
+        </Method>
+        <Method name="preparedStatementSetDetalhes" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="VendaDetalhes" name="vendaDetalhes"/>
+        </Method>
+        <Method name="todosVendas" returnType="List&lt;Venda&gt;" visibility="public"/>
+        <Method name="buscaDetalhesDaVendaPeloId" returnType="List&lt;VendaDetalhes&gt;" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getVendaDetalhes" returnType="VendaDetalhes" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="getVenda" returnType="Venda" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="buscarUsuarioPeloId" returnType="Usuario" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="deleteUsuarioPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarIdDaUltimaVenda" returnType="Long" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="usuarioDao" source="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" target="com.ralu.gestaovenda.modelo.dao.UsuarioDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtoDao" source="com.ralu.gestaovenda.modelo.dao.VendaDao" target="com.ralu.gestaovenda.modelo.dao.ProdutoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

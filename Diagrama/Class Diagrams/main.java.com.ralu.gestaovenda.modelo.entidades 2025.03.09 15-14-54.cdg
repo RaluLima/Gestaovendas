@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.ralu.gestaovenda.modelo.entidades">
+  <ClassDiagramComponents>
+    <Class name="Categoria" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="47.0" yPosition="897.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="descricao"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="2302.0" yPosition="1170.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+        <Field name="endereco" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="telefone"/>
+          <Argument type="String" name="endereco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+        <Method name="getEndereco" returnType="String" visibility="public"/>
+        <Method name="setEndereco" returnType="void" visibility="public">
+          <Argument type="String" name="endereco"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="598.0" yPosition="696.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="preco" type="BigDecimal" visibility="private"/>
+        <Field name="categoria" type="Categoria" visibility="private"/>
+        <Field name="quantidade" type="Integer" visibility="private"/>
+        <Field name="usuario" type="Usuario" visibility="private"/>
+        <Field name="dataHoraCriaco" type="LocalDateTime" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="descricao"/>
+          <Argument type="BigDecimal" name="preco"/>
+          <Argument type="Categoria" name="categoria"/>
+          <Argument type="Integer" name="quantidade"/>
+          <Argument type="Usuario" name="usuario"/>
+          <Argument type="LocalDateTime" name="dataHoraCriaco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getPreco" returnType="BigDecimal" visibility="public"/>
+        <Method name="setPreco" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="preco"/>
+        </Method>
+        <Method name="getCategoria" returnType="Categoria" visibility="public"/>
+        <Method name="setCategoria" returnType="void" visibility="public">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="getQuantidade" returnType="Integer" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="Integer" name="quantidade"/>
+        </Method>
+        <Method name="getUsuario" returnType="Usuario" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="getDataHoraCriaco" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataHoraCriaco" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataHoraCriaco"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="567.0" yPosition="-48.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="senha" type="String" visibility="private"/>
+        <Field name="perfil" type="PERFIL" visibility="private"/>
+        <Field name="usuario" type="String" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+        <Field name="dataHoraCriacao" type="LocalDateTime" visibility="private"/>
+        <Field name="ultimoLogin" type="LocalDateTime" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="senha"/>
+          <Argument type="PERFIL" name="perfil"/>
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+          <Argument type="LocalDateTime" name="ultimoLogin"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getUsuario" returnType="String" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="usuario"/>
+        </Method>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getSenha" returnType="String" visibility="public"/>
+        <Method name="setSenha" returnType="void" visibility="public">
+          <Argument type="String" name="senha"/>
+        </Method>
+        <Method name="getPerfil" returnType="PERFIL" visibility="public"/>
+        <Method name="setPerfil" returnType="void" visibility="public">
+          <Argument type="PERFIL" name="perfil"/>
+        </Method>
+        <Method name="getDataHoraCriacao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataHoraCriacao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+        </Method>
+        <Method name="getUltimoLogin" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setUltimoLogin" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="ultimoLogin"/>
+        </Method>
+        <Method name="reset" returnType="void" visibility="public"/>
+        <Method name="mudarEstado" returnType="void" visibility="public"/>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="isEstado" returnType="boolean" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="boolean" name="estado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Venda" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="1718.0" yPosition="130.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="usuario" type="Usuario" visibility="private"/>
+        <Field name="totalVenda" type="BigDecimal" visibility="private"/>
+        <Field name="valorPago" type="BigDecimal" visibility="private"/>
+        <Field name="troco" type="BigDecimal" visibility="private"/>
+        <Field name="desconto" type="BigDecimal" visibility="private"/>
+        <Field name="dataHoraCriacao" type="LocalDateTime" visibility="private"/>
+        <Field name="ultimaActualizacao" type="LocalDateTime" visibility="private"/>
+        <Field name="vendasDetalhes" type="HashMap&lt;String, VendaDetalhes&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="Usuario" name="usuario"/>
+          <Argument type="BigDecimal" name="totalVenda"/>
+          <Argument type="BigDecimal" name="valorPago"/>
+          <Argument type="BigDecimal" name="troco"/>
+          <Argument type="BigDecimal" name="desconto"/>
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+          <Argument type="LocalDateTime" name="ultimaActualizacao"/>
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendasDetalhes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getUsuario" returnType="Usuario" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="getDataHoraCriacao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataHoraCriacao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+        </Method>
+        <Method name="getUltimaActualizacao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setUltimaActualizacao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="ultimaActualizacao"/>
+        </Method>
+        <Method name="getTotalVenda" returnType="BigDecimal" visibility="public"/>
+        <Method name="setTotalVenda" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="totalVenda"/>
+        </Method>
+        <Method name="getValorPago" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorPago" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorPago"/>
+        </Method>
+        <Method name="getTroco" returnType="BigDecimal" visibility="public"/>
+        <Method name="setTroco" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="troco"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="getDesconto" returnType="BigDecimal" visibility="public"/>
+        <Method name="setDesconto" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="desconto"/>
+        </Method>
+        <Method name="getVendasDetalhes" returnType="HashMap&lt;String, VendaDetalhes&gt;" visibility="public"/>
+        <Method name="setVendasDetalhes" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendasDetalhes"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VendaDetalhes" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="851.0" yPosition="1414.0">
+      <Fields>
+        <Field name="venda" type="Venda" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="desconto" type="BigDecimal" visibility="private"/>
+        <Field name="total" type="BigDecimal" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Venda" name="venda"/>
+          <Argument type="Produto" name="produto"/>
+          <Argument type="int" name="quantidade"/>
+          <Argument type="BigDecimal" name="desconto"/>
+          <Argument type="BigDecimal" name="total"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVenda" returnType="Venda" visibility="public"/>
+        <Method name="setVenda" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="public"/>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getDesconto" returnType="BigDecimal" visibility="public"/>
+        <Method name="setDesconto" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="desconto"/>
+        </Method>
+        <Method name="getTotal" returnType="BigDecimal" visibility="public"/>
+        <Method name="setTotal" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="total"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Estado" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="233.0" yPosition="252.0">
+      <Methods>
+        <Method name="reset" returnType="void" visibility="public"/>
+        <Method name="mudarEstado" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Enum name="PERFIL" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="1447.0" yPosition="51.0">
+      <Literals>
+        <Literal name="ADMIN"/>
+        <Literal name="PADRAO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="perfil" source="com.ralu.gestaovenda.modelo.entidades.Usuario" target="com.ralu.gestaovenda.modelo.entidades.PERFIL" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuario" source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ralu.gestaovenda.modelo.entidades.Usuario" target="com.ralu.gestaovenda.modelo.entidades.Estado"/>
+    <HasRelation name="categoria" source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="venda" source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Usuario" target="com.ralu.gestaovenda.modelo.entidades.PERFIL" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuario" source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendasDetalhes" source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, VendaDetalhes&gt;"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

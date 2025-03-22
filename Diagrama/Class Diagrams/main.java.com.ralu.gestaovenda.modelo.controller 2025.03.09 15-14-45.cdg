@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.ralu.gestaovenda.modelo.controller">
+  <ClassDiagramComponents>
+    <Class name="AutenticacaoController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="loginForm" type="LoginForm" visibility="private" isFinal="true"/>
+        <Field name="autenticacao" type="AutenticacaoDao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LoginForm" name="loginForm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="login" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="limpaTela" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="CategoriaController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private"/>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="categoriaDao" type="CategoriaDao" visibility="private"/>
+        <Field name="categoriaTableModel" type="CategoriaTableModel" visibility="private"/>
+        <Field name="categorias" type="List&lt;Categoria&gt;" visibility="private"/>
+        <Field name="categoria" type="Categoria" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="inicializarComboBoxCategoriaNoProduto" returnType="void" visibility="private"/>
+        <Method name="actualizarTabelaCategoria" returnType="void" visibility="private"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="salvar" returnType="void" visibility="private"/>
+        <Method name="limpaCampos" returnType="void" visibility="private"/>
+        <Method name="validacaoDoCampo" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+        </Method>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="pegarValoresDoFormulario" returnType="Categoria" visibility="private"/>
+        <Method name="preencherValoresNoFormulario" returnType="void" visibility="private"/>
+        <Method name="apagar" returnType="void" visibility="private"/>
+        <Method name="limpar" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="687.0" yPosition="20.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="clienteDao" type="ClienteDao" visibility="private"/>
+        <Field name="clienteTableModel" type="ClienteTableModel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="salvar" returnType="void" visibility="public"/>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="limpar" returnType="void" visibility="private"/>
+        <Method name="mostrarTela" returnType="void" visibility="private"/>
+        <Method name="adicionar" returnType="void" visibility="private"/>
+        <Method name="actualizarTabelaCliente" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="DashboardController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" isFinal="true" xPosition="1135.0" yPosition="0.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private" isFinal="true"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private" isFinal="true"/>
+        <Field name="usuarioTableModel" type="UsuarioTableModel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="painelComponentes" returnType="void" visibility="private">
+          <Argument type="JPanel" name="panel"/>
+        </Method>
+        <Method name="panelClientes" returnType="void" visibility="private"/>
+        <Method name="panelProdutos" returnType="void" visibility="private"/>
+        <Method name="sair" returnType="void" visibility="private"/>
+        <Method name="panelUsuarios" returnType="void" visibility="private"/>
+        <Method name="panelVendas" returnType="void" visibility="private"/>
+        <Method name="panelHome" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="ProdutoController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="320.0" yPosition="591.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+        <Field name="dashboard" type="Dashboard" visibility="private" isFinal="true"/>
+        <Field name="autenticacaoDao" type="AutenticacaoDao" visibility="private" isFinal="true"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private" isFinal="true"/>
+        <Field name="categoriaDao" type="CategoriaDao" visibility="private" isFinal="true"/>
+        <Field name="produtoDao" type="ProdutoDao" visibility="private" isFinal="true"/>
+        <Field name="produtoTableModel" type="ProdutoTableModel" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="adicionar" returnType="void" visibility="private"/>
+        <Method name="usuarioLogado" returnType="Usuario" visibility="private"/>
+        <Method name="mostrarTelaProduto" returnType="void" visibility="private"/>
+        <Method name="mostrarTelaCategoria" returnType="void" visibility="private"/>
+        <Method name="ocultaTelaProduto" returnType="void" visibility="private"/>
+        <Method name="validacaoDoCampo" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+          <Argument type="String" name="nomeDaVariavel"/>
+        </Method>
+        <Method name="validacaoDaQuantidade" returnType="void" visibility="private">
+          <Argument type="Integer" name="quantidade"/>
+        </Method>
+        <Method name="validacaoDoPreco" returnType="void" visibility="private">
+          <Argument type="BigDecimal" name="preco"/>
+        </Method>
+        <Method name="validacaoDaCategoria" returnType="void" visibility="private"/>
+        <Method name="validacaoDaQuantidadeSeENumero" returnType="Integer" visibility="private">
+          <Argument type="String" name="quantidadeString"/>
+        </Method>
+        <Method name="validacaoDaPrecoSeENumero" returnType="BigDecimal" visibility="private">
+          <Argument type="String" name="precoString"/>
+        </Method>
+        <Method name="pegarValoresDoFormulario" returnType="Produto" visibility="private"/>
+        <Method name="salvar" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="limpaCampo" returnType="void" visibility="private"/>
+        <Method name="actualizarTabela" returnType="void" visibility="private">
+          <Argument type="List&lt;Produto&gt;" name="produtos"/>
+        </Method>
+        <Method name="editar" returnType="void" visibility="private"/>
+        <Method name="apagar" returnType="void" visibility="private"/>
+        <Method name="preencherOsValoresNoFormulario" returnType="void" visibility="private"/>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="1023.0" yPosition="357.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="autenticacaoDao" type="AutenticacaoDao" visibility="private"/>
+        <Field name="usuarioTableModel" type="UsuarioTableModel" visibility="private"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private"/>
+        <Field name="usuario" type="Usuario" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="inicializaComboBoxUsuarioPerfil" returnType="void" visibility="private"/>
+        <Method name="mostrarTelaUsuario" returnType="void" visibility="private"/>
+        <Method name="ocultaTelaUsuario" returnType="void" visibility="private"/>
+        <Method name="usuarioLogado" returnType="Usuario" visibility="private"/>
+        <Method name="adicionar" returnType="void" visibility="private"/>
+        <Method name="editar" returnType="void" visibility="private"/>
+        <Method name="remover" returnType="void" visibility="private"/>
+        <Method name="limpaCampos" returnType="void" visibility="private"/>
+        <Method name="validacaoDosCampos" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+          <Argument type="String" name="nomeDaVariavel"/>
+        </Method>
+        <Method name="validacaoDoPerfil" returnType="void" visibility="private"/>
+        <Method name="preencherOsValoresNoFormularioUsuario" returnType="void" visibility="private"/>
+        <Method name="pegarOsValoresDoFormularioUsuario" returnType="Usuario" visibility="private"/>
+        <Method name="salvar" returnType="void" visibility="private"/>
+        <Method name="mensagemNaTela" returnType="void" visibility="public">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="actualizarTabelaUsuario" returnType="void" visibility="private">
+          <Argument type="List&lt;Usuario&gt;" name="usuarios"/>
+        </Method>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="1494.0" yPosition="20.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="produtoDao" type="ProdutoDao" visibility="private"/>
+        <Field name="produtos" type="List&lt;Produto&gt;" visibility="private"/>
+        <Field name="categoriaDao" type="CategoriaDao" visibility="private"/>
+        <Field name="vendaDetalhesCesto" type="HashMap&lt;String, VendaDetalhes&gt;" visibility="private"/>
+        <Field name="vendaRegistroTableModel" type="VendaRegistroTableModel" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="nomeDoProduto" type="String" visibility="private"/>
+        <Field name="autenticacaoDao" type="AutenticacaoDao" visibility="private"/>
+        <Field name="clienteDao" type="ClienteDao" visibility="private"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private"/>
+        <Field name="vendaDao" type="VendaDao" visibility="private"/>
+        <Field name="vendaDetalhes" type="List&lt;VendaDetalhes&gt;" visibility="private"/>
+        <Field name="vendaTableModel" type="VendaTableModel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="mostrarTelaRegistro" returnType="void" visibility="private"/>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="detalhesDoProduto" returnType="void" visibility="private"/>
+        <Method name="informacaoPadraoDaLabelVendaProduto" returnType="void" visibility="private"/>
+        <Method name="inicializarCategoria" returnType="void" visibility="private"/>
+        <Method name="inicializarProduto" returnType="void" visibility="private"/>
+        <Method name="pesquisarProdutoPeloCategoria" returnType="void" visibility="private"/>
+        <Method name="selecionarProdutoNaComboBox" returnType="void" visibility="private"/>
+        <Method name="validacaoDoCampo" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+          <Argument type="String" name="nomeDaVariavel"/>
+        </Method>
+        <Method name="validacaoDaQuantidade" returnType="void" visibility="private">
+          <Argument type="Integer" name="quantidade"/>
+        </Method>
+        <Method name="validacaoDoQuantidadeDoProdutoMaiorQueSolicitado" returnType="void" visibility="private">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="validacaoDaQuantidadeSeENumero" returnType="Integer" visibility="private">
+          <Argument type="String" name="quantidadeString"/>
+        </Method>
+        <Method name="validacaoDaPrecoSeENumero" returnType="BigDecimal" visibility="private">
+          <Argument type="String" name="precoString"/>
+        </Method>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="adicionarProdutoNoCesto" returnType="void" visibility="private"/>
+        <Method name="actualizarCesto" returnType="void" visibility="private">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendaDetalhess"/>
+        </Method>
+        <Method name="actualizarTotalDaVenda" returnType="void" visibility="private"/>
+        <Method name="removerProdutoNoCesto" returnType="void" visibility="private"/>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="usuarioLogado" returnType="Usuario" visibility="private"/>
+        <Method name="ativaCheckBoxDesconto" returnType="void" visibility="private"/>
+        <Method name="vender" returnType="void" visibility="private"/>
+        <Method name="actualizarTabelaVenda" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="detalhes" returnType="void" visibility="private"/>
+        <Method name="limparCampo" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

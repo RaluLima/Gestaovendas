@@ -1,0 +1,1650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="ConexaoMysql" package="com.ralu.gestaovenda.modelo.conexao" visibility="public" xPosition="301.0" yPosition="20.0">
+      <Fields>
+        <Field name="connection" type="Connection" visibility="private"/>
+        <Field name="URL" type="String" visibility="private" isFinal="true"/>
+        <Field name="USER" type="String" visibility="private" isFinal="true"/>
+        <Field name="PASSWORD" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="obterConexao" returnType="Connection" visibility="public"/>
+        <Method name="fecharConexao" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ConexaoPostgres" package="com.ralu.gestaovenda.modelo.conexao" visibility="public" xPosition="48.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="obterConexao" returnType="Connection" visibility="public"/>
+        <Method name="fecharConexao" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AutenticacaoController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="584.0" yPosition="20.0">
+      <Fields>
+        <Field name="loginForm" type="LoginForm" visibility="private" isFinal="true"/>
+        <Field name="autenticacao" type="AutenticacaoDao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LoginForm" name="loginForm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="login" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="limpaTela" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="CategoriaController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="1224.0" yPosition="536.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private"/>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="categoriaDao" type="CategoriaDao" visibility="private"/>
+        <Field name="categoriaTableModel" type="CategoriaTableModel" visibility="private"/>
+        <Field name="categorias" type="List&lt;Categoria&gt;" visibility="private"/>
+        <Field name="categoria" type="Categoria" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="inicializarComboBoxCategoriaNoProduto" returnType="void" visibility="private"/>
+        <Method name="actualizarTabelaCategoria" returnType="void" visibility="private"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="salvar" returnType="void" visibility="private"/>
+        <Method name="limpaCampos" returnType="void" visibility="private"/>
+        <Method name="validacaoDoCampo" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+        </Method>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="pegarValoresDoFormulario" returnType="Categoria" visibility="private"/>
+        <Method name="preencherValoresNoFormulario" returnType="void" visibility="private"/>
+        <Method name="apagar" returnType="void" visibility="private"/>
+        <Method name="limpar" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="1856.0" yPosition="780.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="clienteDao" type="ClienteDao" visibility="private"/>
+        <Field name="clienteTableModel" type="ClienteTableModel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="salvar" returnType="void" visibility="public"/>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="limpar" returnType="void" visibility="private"/>
+        <Method name="mostrarTela" returnType="void" visibility="private"/>
+        <Method name="adicionar" returnType="void" visibility="private"/>
+        <Method name="actualizarTabelaCliente" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="DashboardController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" isFinal="true" xPosition="1642.0" yPosition="32.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private" isFinal="true"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private" isFinal="true"/>
+        <Field name="usuarioTableModel" type="UsuarioTableModel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="painelComponentes" returnType="void" visibility="private">
+          <Argument type="JPanel" name="panel"/>
+        </Method>
+        <Method name="panelClientes" returnType="void" visibility="private"/>
+        <Method name="panelProdutos" returnType="void" visibility="private"/>
+        <Method name="sair" returnType="void" visibility="private"/>
+        <Method name="panelUsuarios" returnType="void" visibility="private"/>
+        <Method name="panelVendas" returnType="void" visibility="private"/>
+        <Method name="panelHome" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="ProdutoController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="1691.0" yPosition="5948.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+        <Field name="dashboard" type="Dashboard" visibility="private" isFinal="true"/>
+        <Field name="autenticacaoDao" type="AutenticacaoDao" visibility="private" isFinal="true"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private" isFinal="true"/>
+        <Field name="categoriaDao" type="CategoriaDao" visibility="private" isFinal="true"/>
+        <Field name="produtoDao" type="ProdutoDao" visibility="private" isFinal="true"/>
+        <Field name="produtoTableModel" type="ProdutoTableModel" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="adicionar" returnType="void" visibility="private"/>
+        <Method name="usuarioLogado" returnType="Usuario" visibility="private"/>
+        <Method name="mostrarTelaProduto" returnType="void" visibility="private"/>
+        <Method name="mostrarTelaCategoria" returnType="void" visibility="private"/>
+        <Method name="ocultaTelaProduto" returnType="void" visibility="private"/>
+        <Method name="validacaoDoCampo" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+          <Argument type="String" name="nomeDaVariavel"/>
+        </Method>
+        <Method name="validacaoDaQuantidade" returnType="void" visibility="private">
+          <Argument type="Integer" name="quantidade"/>
+        </Method>
+        <Method name="validacaoDoPreco" returnType="void" visibility="private">
+          <Argument type="BigDecimal" name="preco"/>
+        </Method>
+        <Method name="validacaoDaCategoria" returnType="void" visibility="private"/>
+        <Method name="validacaoDaQuantidadeSeENumero" returnType="Integer" visibility="private">
+          <Argument type="String" name="quantidadeString"/>
+        </Method>
+        <Method name="validacaoDaPrecoSeENumero" returnType="BigDecimal" visibility="private">
+          <Argument type="String" name="precoString"/>
+        </Method>
+        <Method name="pegarValoresDoFormulario" returnType="Produto" visibility="private"/>
+        <Method name="salvar" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="limpaCampo" returnType="void" visibility="private"/>
+        <Method name="actualizarTabela" returnType="void" visibility="private">
+          <Argument type="List&lt;Produto&gt;" name="produtos"/>
+        </Method>
+        <Method name="editar" returnType="void" visibility="private"/>
+        <Method name="apagar" returnType="void" visibility="private"/>
+        <Method name="preencherOsValoresNoFormulario" returnType="void" visibility="private"/>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="1093.0" yPosition="3007.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="autenticacaoDao" type="AutenticacaoDao" visibility="private"/>
+        <Field name="usuarioTableModel" type="UsuarioTableModel" visibility="private"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private"/>
+        <Field name="usuario" type="Usuario" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="inicializaComboBoxUsuarioPerfil" returnType="void" visibility="private"/>
+        <Method name="mostrarTelaUsuario" returnType="void" visibility="private"/>
+        <Method name="ocultaTelaUsuario" returnType="void" visibility="private"/>
+        <Method name="usuarioLogado" returnType="Usuario" visibility="private"/>
+        <Method name="adicionar" returnType="void" visibility="private"/>
+        <Method name="editar" returnType="void" visibility="private"/>
+        <Method name="remover" returnType="void" visibility="private"/>
+        <Method name="limpaCampos" returnType="void" visibility="private"/>
+        <Method name="validacaoDosCampos" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+          <Argument type="String" name="nomeDaVariavel"/>
+        </Method>
+        <Method name="validacaoDoPerfil" returnType="void" visibility="private"/>
+        <Method name="preencherOsValoresNoFormularioUsuario" returnType="void" visibility="private"/>
+        <Method name="pegarOsValoresDoFormularioUsuario" returnType="Usuario" visibility="private"/>
+        <Method name="salvar" returnType="void" visibility="private"/>
+        <Method name="mensagemNaTela" returnType="void" visibility="public">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="actualizarTabelaUsuario" returnType="void" visibility="private">
+          <Argument type="List&lt;Usuario&gt;" name="usuarios"/>
+        </Method>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaController" package="com.ralu.gestaovenda.modelo.controller" visibility="public" xPosition="4013.0" yPosition="1091.0">
+      <Fields>
+        <Field name="dashboard" type="Dashboard" visibility="private"/>
+        <Field name="produtoDao" type="ProdutoDao" visibility="private"/>
+        <Field name="produtos" type="List&lt;Produto&gt;" visibility="private"/>
+        <Field name="categoriaDao" type="CategoriaDao" visibility="private"/>
+        <Field name="vendaDetalhesCesto" type="HashMap&lt;String, VendaDetalhes&gt;" visibility="private"/>
+        <Field name="vendaRegistroTableModel" type="VendaRegistroTableModel" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="nomeDoProduto" type="String" visibility="private"/>
+        <Field name="autenticacaoDao" type="AutenticacaoDao" visibility="private"/>
+        <Field name="clienteDao" type="ClienteDao" visibility="private"/>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private"/>
+        <Field name="vendaDao" type="VendaDao" visibility="private"/>
+        <Field name="vendaDetalhes" type="List&lt;VendaDetalhes&gt;" visibility="private"/>
+        <Field name="vendaTableModel" type="VendaTableModel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Dashboard" name="dashboard"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="ae"/>
+        </Method>
+        <Method name="mostrarTelaRegistro" returnType="void" visibility="private"/>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="detalhesDoProduto" returnType="void" visibility="private"/>
+        <Method name="informacaoPadraoDaLabelVendaProduto" returnType="void" visibility="private"/>
+        <Method name="inicializarCategoria" returnType="void" visibility="private"/>
+        <Method name="inicializarProduto" returnType="void" visibility="private"/>
+        <Method name="pesquisarProdutoPeloCategoria" returnType="void" visibility="private"/>
+        <Method name="selecionarProdutoNaComboBox" returnType="void" visibility="private"/>
+        <Method name="validacaoDoCampo" returnType="void" visibility="private">
+          <Argument type="String" name="campo"/>
+          <Argument type="String" name="nomeDaVariavel"/>
+        </Method>
+        <Method name="validacaoDaQuantidade" returnType="void" visibility="private">
+          <Argument type="Integer" name="quantidade"/>
+        </Method>
+        <Method name="validacaoDoQuantidadeDoProdutoMaiorQueSolicitado" returnType="void" visibility="private">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="validacaoDaQuantidadeSeENumero" returnType="Integer" visibility="private">
+          <Argument type="String" name="quantidadeString"/>
+        </Method>
+        <Method name="validacaoDaPrecoSeENumero" returnType="BigDecimal" visibility="private">
+          <Argument type="String" name="precoString"/>
+        </Method>
+        <Method name="mensagemNaTela" returnType="void" visibility="private">
+          <Argument type="String" name="mensagem"/>
+          <Argument type="Color" name="color"/>
+        </Method>
+        <Method name="adicionarProdutoNoCesto" returnType="void" visibility="private"/>
+        <Method name="actualizarCesto" returnType="void" visibility="private">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendaDetalhess"/>
+        </Method>
+        <Method name="actualizarTotalDaVenda" returnType="void" visibility="private"/>
+        <Method name="removerProdutoNoCesto" returnType="void" visibility="private"/>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="usuarioLogado" returnType="Usuario" visibility="private"/>
+        <Method name="ativaCheckBoxDesconto" returnType="void" visibility="private"/>
+        <Method name="vender" returnType="void" visibility="private"/>
+        <Method name="actualizarTabelaVenda" returnType="void" visibility="private"/>
+        <Method name="cancelar" returnType="void" visibility="private"/>
+        <Method name="detalhes" returnType="void" visibility="private"/>
+        <Method name="limparCampo" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="AutenticacaoDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="539.0" yPosition="367.0">
+      <Fields>
+        <Field name="usuarioDao" type="UsuarioDao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="temPermissao" returnType="boolean" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="permissao" returnType="void" visibility="private">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="login" returnType="Usuario" visibility="public">
+          <Argument type="LoginDto" name="login"/>
+        </Method>
+        <Method name="validaSenha" returnType="boolean" visibility="private">
+          <Argument type="String" name="usuarioSenha"/>
+          <Argument type="String" name="loginSenha"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoriaDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="1707.0" yPosition="1748.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="todasCategorias" returnType="List&lt;Categoria&gt;" visibility="public"/>
+        <Method name="buscarCategoriaPeloId" returnType="Categoria" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarCategoriaPeloNome" returnType="Categoria" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="deleteCategoriaPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getCategoria" returnType="Categoria" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="997.0" yPosition="32.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="registar" returnType="String" visibility="private">
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="todosCliente" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="buscarClientePeloId" returnType="Cliente" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarUltimoCliente" returnType="Cliente" visibility="public"/>
+        <Method name="getCliente" returnType="Cliente" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="deleteClientePeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProdutoDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="3256.0" yPosition="617.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="actualizarQuantidade" returnType="String" visibility="public">
+          <Argument type="Long" name="idProduto"/>
+          <Argument type="Integer" name="quantidade"/>
+          <Argument type="Long" name="usuarioId"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="todosProdutos" returnType="List&lt;Produto&gt;" visibility="public"/>
+        <Method name="buscarProdutoPeloId" returnType="Produto" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarProdutosPeloCategoria" returnType="List&lt;Produto&gt;" visibility="public">
+          <Argument type="String" name="categoria"/>
+        </Method>
+        <Method name="buscarProdutoPeloNome" returnType="Produto" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="deletaProdutoPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="1631.0" yPosition="5432.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="todosUsuarios" returnType="List&lt;Usuario&gt;" visibility="public"/>
+        <Method name="getUsuario" returnType="Usuario" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="buscarUsuarioPeloId" returnType="Usuario" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarUsuarioPeloUsername" returnType="Usuario" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="deleteUsuarioPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="actualizarUltimoLogin" returnType="void" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaDao" package="com.ralu.gestaovenda.modelo.dao" visibility="public" xPosition="4059.0" yPosition="3025.0">
+      <Fields>
+        <Field name="conexao" type="Conexao" visibility="private" isFinal="true"/>
+        <Field name="produtoDao" type="ProdutoDao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="salvar" returnType="String" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="adicionar" returnType="String" visibility="private">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="editar" returnType="String" visibility="private">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="preparedStatementSet" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="adicionarVendaItem" returnType="void" visibility="private">
+          <Argument type="VendaDetalhes" name="vendaDetalhes"/>
+        </Method>
+        <Method name="editarVendaItem" returnType="void" visibility="private">
+          <Argument type="VendaDetalhes" name="vendaDetalhes"/>
+        </Method>
+        <Method name="preparedStatementSetDetalhes" returnType="void" visibility="private">
+          <Argument type="PreparedStatement" name="preparedStatement"/>
+          <Argument type="VendaDetalhes" name="vendaDetalhes"/>
+        </Method>
+        <Method name="todosVendas" returnType="List&lt;Venda&gt;" visibility="public"/>
+        <Method name="buscaDetalhesDaVendaPeloId" returnType="List&lt;VendaDetalhes&gt;" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getVendaDetalhes" returnType="VendaDetalhes" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="getVenda" returnType="Venda" visibility="private">
+          <Argument type="ResultSet" name="result"/>
+        </Method>
+        <Method name="buscarUsuarioPeloId" returnType="Usuario" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="deleteUsuarioPeloId" returnType="String" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="buscarIdDaUltimaVenda" returnType="Long" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Categoria" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="955.0" yPosition="1314.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="descricao"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="2377.0" yPosition="32.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+        <Field name="endereco" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="telefone"/>
+          <Argument type="String" name="endereco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+        <Method name="getEndereco" returnType="String" visibility="public"/>
+        <Method name="setEndereco" returnType="void" visibility="public">
+          <Argument type="String" name="endereco"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="2545.0" yPosition="1506.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="preco" type="BigDecimal" visibility="private"/>
+        <Field name="categoria" type="Categoria" visibility="private"/>
+        <Field name="quantidade" type="Integer" visibility="private"/>
+        <Field name="usuario" type="Usuario" visibility="private"/>
+        <Field name="dataHoraCriaco" type="LocalDateTime" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="descricao"/>
+          <Argument type="BigDecimal" name="preco"/>
+          <Argument type="Categoria" name="categoria"/>
+          <Argument type="Integer" name="quantidade"/>
+          <Argument type="Usuario" name="usuario"/>
+          <Argument type="LocalDateTime" name="dataHoraCriaco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getPreco" returnType="BigDecimal" visibility="public"/>
+        <Method name="setPreco" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="preco"/>
+        </Method>
+        <Method name="getCategoria" returnType="Categoria" visibility="public"/>
+        <Method name="setCategoria" returnType="void" visibility="public">
+          <Argument type="Categoria" name="categoria"/>
+        </Method>
+        <Method name="getQuantidade" returnType="Integer" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="Integer" name="quantidade"/>
+        </Method>
+        <Method name="getUsuario" returnType="Usuario" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="getDataHoraCriaco" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataHoraCriaco" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataHoraCriaco"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="2623.0" yPosition="5630.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="senha" type="String" visibility="private"/>
+        <Field name="perfil" type="PERFIL" visibility="private"/>
+        <Field name="usuario" type="String" visibility="private"/>
+        <Field name="estado" type="boolean" visibility="private"/>
+        <Field name="dataHoraCriacao" type="LocalDateTime" visibility="private"/>
+        <Field name="ultimoLogin" type="LocalDateTime" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="nome"/>
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="senha"/>
+          <Argument type="PERFIL" name="perfil"/>
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+          <Argument type="LocalDateTime" name="ultimoLogin"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getUsuario" returnType="String" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="usuario"/>
+        </Method>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getSenha" returnType="String" visibility="public"/>
+        <Method name="setSenha" returnType="void" visibility="public">
+          <Argument type="String" name="senha"/>
+        </Method>
+        <Method name="getPerfil" returnType="PERFIL" visibility="public"/>
+        <Method name="setPerfil" returnType="void" visibility="public">
+          <Argument type="PERFIL" name="perfil"/>
+        </Method>
+        <Method name="getDataHoraCriacao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataHoraCriacao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+        </Method>
+        <Method name="getUltimoLogin" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setUltimoLogin" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="ultimoLogin"/>
+        </Method>
+        <Method name="reset" returnType="void" visibility="public"/>
+        <Method name="mudarEstado" returnType="void" visibility="public"/>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="isEstado" returnType="boolean" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="boolean" name="estado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Venda" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="1908.0" yPosition="3660.0">
+      <Fields>
+        <Field name="id" type="Long" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="usuario" type="Usuario" visibility="private"/>
+        <Field name="totalVenda" type="BigDecimal" visibility="private"/>
+        <Field name="valorPago" type="BigDecimal" visibility="private"/>
+        <Field name="troco" type="BigDecimal" visibility="private"/>
+        <Field name="desconto" type="BigDecimal" visibility="private"/>
+        <Field name="dataHoraCriacao" type="LocalDateTime" visibility="private"/>
+        <Field name="ultimaActualizacao" type="LocalDateTime" visibility="private"/>
+        <Field name="vendasDetalhes" type="HashMap&lt;String, VendaDetalhes&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="id"/>
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="Usuario" name="usuario"/>
+          <Argument type="BigDecimal" name="totalVenda"/>
+          <Argument type="BigDecimal" name="valorPago"/>
+          <Argument type="BigDecimal" name="troco"/>
+          <Argument type="BigDecimal" name="desconto"/>
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+          <Argument type="LocalDateTime" name="ultimaActualizacao"/>
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendasDetalhes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getUsuario" returnType="Usuario" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="getDataHoraCriacao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataHoraCriacao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataHoraCriacao"/>
+        </Method>
+        <Method name="getUltimaActualizacao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setUltimaActualizacao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="ultimaActualizacao"/>
+        </Method>
+        <Method name="getTotalVenda" returnType="BigDecimal" visibility="public"/>
+        <Method name="setTotalVenda" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="totalVenda"/>
+        </Method>
+        <Method name="getValorPago" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorPago" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorPago"/>
+        </Method>
+        <Method name="getTroco" returnType="BigDecimal" visibility="public"/>
+        <Method name="setTroco" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="troco"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="getDesconto" returnType="BigDecimal" visibility="public"/>
+        <Method name="setDesconto" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="desconto"/>
+        </Method>
+        <Method name="getVendasDetalhes" returnType="HashMap&lt;String, VendaDetalhes&gt;" visibility="public"/>
+        <Method name="setVendasDetalhes" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendasDetalhes"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VendaDetalhes" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="2601.0" yPosition="2922.0">
+      <Fields>
+        <Field name="venda" type="Venda" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="desconto" type="BigDecimal" visibility="private"/>
+        <Field name="total" type="BigDecimal" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Venda" name="venda"/>
+          <Argument type="Produto" name="produto"/>
+          <Argument type="int" name="quantidade"/>
+          <Argument type="BigDecimal" name="desconto"/>
+          <Argument type="BigDecimal" name="total"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVenda" returnType="Venda" visibility="public"/>
+        <Method name="setVenda" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="public"/>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getDesconto" returnType="BigDecimal" visibility="public"/>
+        <Method name="setDesconto" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="desconto"/>
+        </Method>
+        <Method name="getTotal" returnType="BigDecimal" visibility="public"/>
+        <Method name="setTotal" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="total"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NegocioException" package="com.ralu.gestaovenda.modelo.exception" visibility="public" xPosition="2.0" yPosition="532.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="mensagem"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AbstractKeyListener" package="com.ralu.gestaovenda.modelo.util" visibility="public" isAbstract="true" xPosition="20.0" yPosition="316.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AbstractMouseListener" package="com.ralu.gestaovenda.modelo.util" visibility="public" isAbstract="true" xPosition="2377.0" yPosition="689.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseDragged" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseMoved" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoriaTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="1128.0" yPosition="1865.0">
+      <Fields>
+        <Field name="categorias" type="List&lt;Categoria&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Categoria&gt;" name="categorias"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getCategorias" returnType="List&lt;Categoria&gt;" visibility="public"/>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="2579.0" yPosition="971.0">
+      <Fields>
+        <Field name="clientes" type="List&lt;Cliente&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Cliente&gt;" name="clientes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getClientes" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProdutoTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="produtos" type="List&lt;Produto&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Produto&gt;" name="produtos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getProdutos" returnType="List&lt;Produto&gt;" visibility="public"/>
+        <Method name="setProdutos" returnType="void" visibility="public">
+          <Argument type="List&lt;Produto&gt;" name="produtos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="3623.0" yPosition="1758.0">
+      <Fields>
+        <Field name="usuarios" type="List&lt;Usuario&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Usuario&gt;" name="usuarios"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getUsuarios" returnType="List&lt;Usuario&gt;" visibility="public"/>
+        <Method name="setUsuarios" returnType="void" visibility="public">
+          <Argument type="List&lt;Usuario&gt;" name="usuarios"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaRegistroTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="1380.0" yPosition="2295.0">
+      <Fields>
+        <Field name="vendaDetalhes" type="HashMap&lt;String, VendaDetalhes&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendaDetalhes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getVendaDetalhes" returnType="HashMap&lt;String, VendaDetalhes&gt;" visibility="public"/>
+        <Method name="setVendaDetalhes" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendaDetalhes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="2120.0" yPosition="3243.0">
+      <Fields>
+        <Field name="vendas" type="List&lt;Venda&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Venda&gt;" name="vendas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getVendas" returnType="List&lt;Venda&gt;" visibility="public"/>
+        <Method name="setVendas" returnType="void" visibility="public">
+          <Argument type="List&lt;Venda&gt;" name="vendas"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Dashboard" package="com.ralu.gestaovenda.view.formulario" visibility="public" xPosition="48.0" yPosition="1567.0">
+      <Fields>
+        <Field name="dashboardController" type="DashboardController" visibility="private"/>
+        <Field name="categoriaController" type="CategoriaController" visibility="private"/>
+        <Field name="produtoController" type="ProdutoController" visibility="private"/>
+        <Field name="usuarioController" type="UsuarioController" visibility="private"/>
+        <Field name="vendaController" type="VendaController" visibility="private"/>
+        <Field name="clienteController" type="ClienteController" visibility="private"/>
+        <Field name="botaoCategoriaApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoCategoriaCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoCategoriaLimpar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoCategoriaSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteEditar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardClientes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardHome" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardProdutos" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardSair" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardUsuario" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardVendas" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoAdicionarCategoria" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoEditar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioEditar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaDetalhes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaLimpar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaRegistroRemover" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaResgistroAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaVender" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="checkboxVendaDesconto" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="comboBoxProdutoCategoria" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="comboBoxUsuarioPerfil" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="comboBoxVendaPesquisarProdutoPelaCategoria" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="comboBoxVendaProduto" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="dialogCategoria" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogCliente" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogProduto" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogUsuario" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogVenda" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton14" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton15" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel22" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel23" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel24" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel25" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel26" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel27" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel28" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel29" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel30" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel31" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel32" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel33" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel34" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel35" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel36" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel37" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel38" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel39" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel40" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel41" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel42" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel43" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel44" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel45" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel46" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel47" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel48" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel49" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel50" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel51" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel52" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel53" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel0" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel10" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel11" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel12" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel13" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel14" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel15" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel16" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel17" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel18" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel19" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel20" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel21" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel22" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel23" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel24" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane6" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane7" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane8" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator4" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator5" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator6" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator7" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="labelCategoriaMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelClienteMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelDashboardBemvidoUsuario" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelHomeCliente" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelHomeProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelHomeVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelP" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelProdutoMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelUsuarioLogadoId" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelUsuarioMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaDesconto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaNomeDoProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaPrecoDoProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaQuantidadeDoProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaTotalDaVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaTroco" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaValorPago" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="panelBody" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelCliente" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelHome" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelProduto" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelUsuarios" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelVendas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="radioBotaoUsuarioActivo" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="radioBotaoUsuarioDesativo" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="tabelaCategoria" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaCliente" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaProduto" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaUsuario" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaVendRegistro" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaVenda" type="javax.swing.JTable" visibility="private"/>
+        <Field name="txtCategoriaDescricao" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtCategoriaId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCategoriaNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteEndereco" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteTelefone" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoDescricao" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtProdutoId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoPesquisar" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoPreco" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoQuantidade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtUsuarioId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsuarioNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsuarioPesquisar" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsuarioSenha" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="txtUsuarioUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaCliente" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaDesconto" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaPesquisarProduto" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaQuantidade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtVendaValorPago" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="eventosDashboard" returnType="void" visibility="private"/>
+        <Method name="eventoUsuario" returnType="void" visibility="private"/>
+        <Method name="eventoProduto" returnType="void" visibility="private"/>
+        <Method name="eventoVenda" returnType="void" visibility="private"/>
+        <Method name="eventoCategoria" returnType="void" visibility="private"/>
+        <Method name="eventoCliente" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="botaoDashboardHomeMouseDragged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardUsuarioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardProdutosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardHomeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardVendasActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="comboBoxProdutoCategoriaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="comboBoxVendaPesquisarProdutoPelaCategoriaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtVendaDescontoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getBotaoDashboardHome" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardProdutos" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardClientes" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardVendas" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardUsuarios" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardSair" returnType="JButton" visibility="public"/>
+        <Method name="getPanelHome" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelBody" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelProduto" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelCliente" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelVenda" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelUsuario" returnType="JPanel" visibility="public"/>
+        <Method name="getTabelaUsuarios" returnType="JTable" visibility="public"/>
+        <Method name="getLabelBenvindoUsuario" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelUsuarioLogadoId" returnType="JLabel" visibility="public"/>
+        <Method name="getBotaoUsuarioAdicionar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoUsuarioEditar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoUsuarioApagar" returnType="JButton" visibility="public"/>
+        <Method name="getDialogUsuario" returnType="JDialog" visibility="public"/>
+        <Method name="getComboBoxUsuarioPerfil" returnType="JComboBox" visibility="public"/>
+        <Method name="getTxtUsuarioId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtUsuarioNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtUsuarioSenha" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtUsuarioUsername" returnType="JTextField" visibility="public"/>
+        <Method name="getRadioBotaoActivo" returnType="JRadioButton" visibility="public"/>
+        <Method name="getRadioBotaoDesativo" returnType="JRadioButton" visibility="public"/>
+        <Method name="getLabelUsuarioMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTxtUsuarioPesquisar" returnType="JTextField" visibility="public"/>
+        <Method name="getBotaoCategoriaSalvar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoCategoriaCancelar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoCategoriaApagar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoCategoriaLimpar" returnType="JButton" visibility="public"/>
+        <Method name="getTxtCategoriaId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtCategoriaNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtCategoriaDescricao" returnType="JTextArea" visibility="public"/>
+        <Method name="getTabelaCategoria" returnType="JTable" visibility="public"/>
+        <Method name="getDialogProduto" returnType="JDialog" visibility="public"/>
+        <Method name="getBotaoProdutoAdicionarCategoria" returnType="JButton" visibility="public"/>
+        <Method name="getDialogCategoria" returnType="JDialog" visibility="public"/>
+        <Method name="getBotaoProdutoAdicionar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoProdutoEditar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoProdutoApagar" returnType="JButton" visibility="public"/>
+        <Method name="getLabelCategoriaMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getComboBoxProdutoCategoria" returnType="JComboBox" visibility="public"/>
+        <Method name="getTxtProdutoId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtProdutoNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtProdutoPreco" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtProdutoQuantidade" returnType="JSpinner" visibility="public"/>
+        <Method name="getTxtProdutoDescricao" returnType="JTextArea" visibility="public"/>
+        <Method name="getLabelProdutoMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTabelaProduto" returnType="JTable" visibility="public"/>
+        <Method name="getTxtProdutoPesquisar" returnType="JTextField" visibility="public"/>
+        <Method name="getDialogVenda" returnType="JDialog" visibility="public"/>
+        <Method name="getLabelVendaPrecoDoProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaQuantidadeDoProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaNomedeDoProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getTxtVendaPesquisarProduto" returnType="JTextField" visibility="public"/>
+        <Method name="getComboBoxVendaPesquisarProdutoPelaCategoria" returnType="JComboBox" visibility="public"/>
+        <Method name="getComboBoVendaProduto" returnType="JComboBox" visibility="public"/>
+        <Method name="getLabelVendaMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTabelaVendaRegistro" returnType="JTable" visibility="public"/>
+        <Method name="getTxtVendaId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtVendaQuantidade" returnType="JSpinner" visibility="public"/>
+        <Method name="getTxtVendaValorPago" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtVendaDesconto" returnType="JTextField" visibility="public"/>
+        <Method name="getLabelVendaTotalDaVenda" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaValorPago" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaTotalDoDesconto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaTroco" returnType="JLabel" visibility="public"/>
+        <Method name="getCheckBoxVendaDesconto" returnType="JCheckBox" visibility="public"/>
+        <Method name="getLabelClienteMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTxtClienteId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtClienteNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtClienteTelefone" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtClienteEndereco" returnType="JTextField" visibility="public"/>
+        <Method name="getDialogCliente" returnType="JDialog" visibility="public"/>
+        <Method name="getTxtVendaCliente" returnType="JTextField" visibility="public"/>
+        <Method name="getTabelaVenda" returnType="JTable" visibility="public"/>
+        <Method name="getBotaoVendaDetalhes" returnType="JButton" visibility="public"/>
+        <Method name="getLabelHomeProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelHomeCliente" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelHomeVenda" returnType="JLabel" visibility="public"/>
+        <Method name="getTabelaCliente" returnType="JTable" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginForm" package="com.ralu.gestaovenda.view.formulario" visibility="public" xPosition="563.0" yPosition="894.0">
+      <Fields>
+        <Field name="autenticacaoController" type="AutenticacaoController" visibility="private"/>
+        <Field name="botaoLoginCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoLoginLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="labelLoginMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtLoginSenha" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="txtLoginUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="eventos" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getTxtLoginUsername" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtLoginSenha" returnType="JTextField" visibility="public"/>
+        <Method name="getBotaoLoginLogin" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoLoginCancelar" returnType="JButton" visibility="public"/>
+        <Method name="getLabelLoginMensagem" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginDto" package="com.ralu.gestaovenda.view.modelo" visibility="public" xPosition="2937.0" yPosition="1181.0">
+      <Fields>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="senha" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="senha"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUsername" returnType="String" visibility="public"/>
+        <Method name="setUsername" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getSenha" returnType="String" visibility="public"/>
+        <Method name="setSenha" returnType="void" visibility="public">
+          <Argument type="String" name="senha"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Conexao" package="com.ralu.gestaovenda.modelo.conexao" visibility="public" xPosition="337.0" yPosition="689.0">
+      <Methods>
+        <Method name="obterConexao" returnType="Connection" visibility="public"/>
+        <Method name="fecharConexao" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Estado" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="1380.0" yPosition="1663.0">
+      <Methods>
+        <Method name="reset" returnType="void" visibility="public"/>
+        <Method name="mudarEstado" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Enum name="PERFIL" package="com.ralu.gestaovenda.modelo.entidades" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Literals>
+        <Literal name="ADMIN"/>
+        <Literal name="PADRAO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="dashboardController" source="com.ralu.gestaovenda.view.formulario.Dashboard" target="com.ralu.gestaovenda.modelo.controller.DashboardController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoria" source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autenticacao" source="com.ralu.gestaovenda.modelo.controller.AutenticacaoController" target="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexao" source="com.ralu.gestaovenda.modelo.dao.ProdutoDao" target="com.ralu.gestaovenda.modelo.conexao.Conexao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dashboard" source="com.ralu.gestaovenda.modelo.controller.ClienteController" target="com.ralu.gestaovenda.view.formulario.Dashboard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaController" source="com.ralu.gestaovenda.view.formulario.Dashboard" target="com.ralu.gestaovenda.modelo.controller.VendaController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.util.ProdutoTableModel" target="com.ralu.gestaovenda.modelo.entidades.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categorias" source="com.ralu.gestaovenda.modelo.controller.CategoriaController" target="com.ralu.gestaovenda.modelo.entidades.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Categoria&gt;"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.ProdutoDao" target="com.ralu.gestaovenda.modelo.entidades.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioTableModel" source="com.ralu.gestaovenda.modelo.controller.UsuarioController" target="com.ralu.gestaovenda.modelo.util.UsuarioTableModel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autenticacaoDao" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dashboard" source="com.ralu.gestaovenda.modelo.controller.CategoriaController" target="com.ralu.gestaovenda.view.formulario.Dashboard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtos" source="com.ralu.gestaovenda.modelo.util.ProdutoTableModel" target="com.ralu.gestaovenda.modelo.entidades.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Produto&gt;"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaDetalhesCesto" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, VendaDetalhes&gt;"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Usuario" target="com.ralu.gestaovenda.modelo.entidades.PERFIL" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.ClienteDao" target="com.ralu.gestaovenda.modelo.entidades.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="venda" source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.util.UsuarioTableModel" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoriaController" source="com.ralu.gestaovenda.view.formulario.Dashboard" target="com.ralu.gestaovenda.modelo.controller.CategoriaController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendasDetalhes" source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, VendaDetalhes&gt;"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.VendaDao" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendas" source="com.ralu.gestaovenda.modelo.util.VendaTableModel" target="com.ralu.gestaovenda.modelo.entidades.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Venda&gt;"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.controller.UsuarioController" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.util.ClienteTableModel" target="com.ralu.gestaovenda.modelo.entidades.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.util.CategoriaTableModel" target="com.ralu.gestaovenda.modelo.entidades.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="perfil" source="com.ralu.gestaovenda.modelo.entidades.Usuario" target="com.ralu.gestaovenda.modelo.entidades.PERFIL" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtoController" source="com.ralu.gestaovenda.view.formulario.Dashboard" target="com.ralu.gestaovenda.modelo.controller.ProdutoController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuario" source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexao" source="com.ralu.gestaovenda.modelo.dao.CategoriaDao" target="com.ralu.gestaovenda.modelo.conexao.Conexao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dashboard" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.view.formulario.Dashboard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autenticacaoDao" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoriaDao" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.dao.CategoriaDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.CategoriaDao" target="com.ralu.gestaovenda.modelo.entidades.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ralu.gestaovenda.modelo.conexao.ConexaoPostgres" target="com.ralu.gestaovenda.modelo.conexao.Conexao"/>
+    <HasRelation name="clientes" source="com.ralu.gestaovenda.modelo.util.ClienteTableModel" target="com.ralu.gestaovenda.modelo.entidades.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
+    <HasRelation name="usuarioDao" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.dao.UsuarioDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.entidades.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtoTableModel" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.util.ProdutoTableModel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtoDao" source="com.ralu.gestaovenda.modelo.dao.VendaDao" target="com.ralu.gestaovenda.modelo.dao.ProdutoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.util.VendaRegistroTableModel" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioDao" source="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" target="com.ralu.gestaovenda.modelo.dao.UsuarioDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaTableModel" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.util.VendaTableModel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoria" source="com.ralu.gestaovenda.modelo.controller.CategoriaController" target="com.ralu.gestaovenda.modelo.entidades.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarios" source="com.ralu.gestaovenda.modelo.util.UsuarioTableModel" target="com.ralu.gestaovenda.modelo.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Usuario&gt;"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.VendaDao" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioDao" source="com.ralu.gestaovenda.modelo.controller.DashboardController" target="com.ralu.gestaovenda.modelo.dao.UsuarioDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autenticacaoController" source="com.ralu.gestaovenda.view.formulario.LoginForm" target="com.ralu.gestaovenda.modelo.controller.AutenticacaoController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexao" source="com.ralu.gestaovenda.modelo.dao.VendaDao" target="com.ralu.gestaovenda.modelo.conexao.Conexao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autenticacaoDao" source="com.ralu.gestaovenda.modelo.controller.UsuarioController" target="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexao" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.conexao.Conexao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ralu.gestaovenda.modelo.entidades.Usuario" target="com.ralu.gestaovenda.modelo.entidades.Estado"/>
+    <HasRelation name="produtos" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.entidades.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Produto&gt;"/>
+    <HasRelation name="produto" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.entidades.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.controller.CategoriaController" target="com.ralu.gestaovenda.modelo.entidades.Categoria" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loginForm" source="com.ralu.gestaovenda.modelo.controller.AutenticacaoController" target="com.ralu.gestaovenda.view.formulario.LoginForm" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexao" source="com.ralu.gestaovenda.modelo.controller.CategoriaController" target="com.ralu.gestaovenda.modelo.conexao.Conexao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dashboard" source="com.ralu.gestaovenda.modelo.controller.DashboardController" target="com.ralu.gestaovenda.view.formulario.Dashboard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dashboard" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.view.formulario.Dashboard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoriaDao" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.dao.CategoriaDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clienteController" source="com.ralu.gestaovenda.view.formulario.Dashboard" target="com.ralu.gestaovenda.modelo.controller.ClienteController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaDao" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.dao.VendaDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clienteDao" source="com.ralu.gestaovenda.modelo.controller.ClienteController" target="com.ralu.gestaovenda.modelo.dao.ClienteDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.entidades.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtoDao" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.dao.ProdutoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaDetalhes" source="com.ralu.gestaovenda.modelo.util.VendaRegistroTableModel" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, VendaDetalhes&gt;"/>
+    <HasRelation name="usuarioTableModel" source="com.ralu.gestaovenda.modelo.controller.DashboardController" target="com.ralu.gestaovenda.modelo.util.UsuarioTableModel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaRegistroTableModel" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.util.VendaRegistroTableModel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtoDao" source="com.ralu.gestaovenda.modelo.controller.ProdutoController" target="com.ralu.gestaovenda.modelo.dao.ProdutoDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuario" source="com.ralu.gestaovenda.modelo.controller.UsuarioController" target="com.ralu.gestaovenda.modelo.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" target="com.ralu.gestaovenda.modelo.entidades.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.util.AbstractMouseListener"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.AutenticacaoDao" target="com.ralu.gestaovenda.view.modelo.LoginDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaDetalhes" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;VendaDetalhes&gt;"/>
+    <HasRelation name="usuario" source="com.ralu.gestaovenda.modelo.entidades.Produto" target="com.ralu.gestaovenda.modelo.entidades.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clienteTableModel" source="com.ralu.gestaovenda.modelo.controller.ClienteController" target="com.ralu.gestaovenda.modelo.util.ClienteTableModel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoriaTableModel" source="com.ralu.gestaovenda.modelo.controller.CategoriaController" target="com.ralu.gestaovenda.modelo.util.CategoriaTableModel" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ralu.gestaovenda.modelo.conexao.ConexaoMysql" target="com.ralu.gestaovenda.modelo.conexao.Conexao"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.util.VendaTableModel" target="com.ralu.gestaovenda.modelo.entidades.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dashboard" source="com.ralu.gestaovenda.modelo.controller.UsuarioController" target="com.ralu.gestaovenda.view.formulario.Dashboard" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clienteDao" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.dao.ClienteDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="conexao" source="com.ralu.gestaovenda.modelo.dao.UsuarioDao" target="com.ralu.gestaovenda.modelo.conexao.Conexao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categorias" source="com.ralu.gestaovenda.modelo.util.CategoriaTableModel" target="com.ralu.gestaovenda.modelo.entidades.Categoria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Categoria&gt;"/>
+    <HasRelation name="conexao" source="com.ralu.gestaovenda.modelo.dao.ClienteDao" target="com.ralu.gestaovenda.modelo.conexao.Conexao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.entidades.Venda" target="com.ralu.gestaovenda.modelo.entidades.VendaDetalhes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioDao" source="com.ralu.gestaovenda.modelo.controller.VendaController" target="com.ralu.gestaovenda.modelo.dao.UsuarioDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioController" source="com.ralu.gestaovenda.view.formulario.Dashboard" target="com.ralu.gestaovenda.modelo.controller.UsuarioController" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioDao" source="com.ralu.gestaovenda.modelo.controller.UsuarioController" target="com.ralu.gestaovenda.modelo.dao.UsuarioDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.VendaDao" target="com.ralu.gestaovenda.modelo.entidades.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ralu.gestaovenda.modelo.dao.UsuarioDao" target="com.ralu.gestaovenda.modelo.entidades.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="categoriaDao" source="com.ralu.gestaovenda.modelo.controller.CategoriaController" target="com.ralu.gestaovenda.modelo.dao.CategoriaDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

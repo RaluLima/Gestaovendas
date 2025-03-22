@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.ralu.gestaovenda.modelo.util">
+  <ClassDiagramComponents>
+    <Class name="AbstractKeyListener" package="com.ralu.gestaovenda.modelo.util" visibility="public" isAbstract="true" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="keyTyped" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyPressed" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+        <Method name="keyReleased" returnType="void" visibility="public">
+          <Argument type="KeyEvent" name="ke"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AbstractMouseListener" package="com.ralu.gestaovenda.modelo.util" visibility="public" isAbstract="true" xPosition="34.0" yPosition="237.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="mouseClicked" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mousePressed" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseReleased" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseEntered" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseExited" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseDragged" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+        <Method name="mouseMoved" returnType="void" visibility="public">
+          <Argument type="MouseEvent" name="me"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CategoriaTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="330.0" yPosition="20.0">
+      <Fields>
+        <Field name="categorias" type="List&lt;Categoria&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Categoria&gt;" name="categorias"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getCategorias" returnType="List&lt;Categoria&gt;" visibility="public"/>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="390.0" yPosition="310.0">
+      <Fields>
+        <Field name="clientes" type="List&lt;Cliente&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Cliente&gt;" name="clientes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getClientes" returnType="List&lt;Cliente&gt;" visibility="public"/>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProdutoTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="750.0" yPosition="20.0">
+      <Fields>
+        <Field name="produtos" type="List&lt;Produto&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Produto&gt;" name="produtos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getProdutos" returnType="List&lt;Produto&gt;" visibility="public"/>
+        <Method name="setProdutos" returnType="void" visibility="public">
+          <Argument type="List&lt;Produto&gt;" name="produtos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="782.0" yPosition="330.0">
+      <Fields>
+        <Field name="usuarios" type="List&lt;Usuario&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Usuario&gt;" name="usuarios"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getUsuarios" returnType="List&lt;Usuario&gt;" visibility="public"/>
+        <Method name="setUsuarios" returnType="void" visibility="public">
+          <Argument type="List&lt;Usuario&gt;" name="usuarios"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaRegistroTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="1247.0" yPosition="20.0">
+      <Fields>
+        <Field name="vendaDetalhes" type="HashMap&lt;String, VendaDetalhes&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendaDetalhes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getVendaDetalhes" returnType="HashMap&lt;String, VendaDetalhes&gt;" visibility="public"/>
+        <Method name="setVendaDetalhes" returnType="void" visibility="public">
+          <Argument type="HashMap&lt;String, VendaDetalhes&gt;" name="vendaDetalhes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaTableModel" package="com.ralu.gestaovenda.modelo.util" visibility="public" xPosition="1305.0" yPosition="345.0">
+      <Fields>
+        <Field name="vendas" type="List&lt;Venda&gt;" visibility="private"/>
+        <Field name="colunas" type="String[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Venda&gt;" name="vendas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="linha"/>
+          <Argument type="int" name="coluna"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getVendas" returnType="List&lt;Venda&gt;" visibility="public"/>
+        <Method name="setVendas" returnType="void" visibility="public">
+          <Argument type="List&lt;Venda&gt;" name="vendas"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="rowIndex"/>
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.ralu.gestaovenda.view.formulario">
+  <ClassDiagramComponents>
+    <Class name="Dashboard" package="com.ralu.gestaovenda.view.formulario" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="dashboardController" type="DashboardController" visibility="private"/>
+        <Field name="categoriaController" type="CategoriaController" visibility="private"/>
+        <Field name="produtoController" type="ProdutoController" visibility="private"/>
+        <Field name="usuarioController" type="UsuarioController" visibility="private"/>
+        <Field name="vendaController" type="VendaController" visibility="private"/>
+        <Field name="clienteController" type="ClienteController" visibility="private"/>
+        <Field name="botaoCategoriaApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoCategoriaCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoCategoriaLimpar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoCategoriaSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteEditar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoClienteSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardClientes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardHome" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardProdutos" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardSair" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardUsuario" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoDashboardVendas" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoAdicionarCategoria" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoEditar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoProdutoSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioApagar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioEditar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoUsuarioSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaDetalhes" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaLimpar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaRegistroRemover" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaResgistroAdicionar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoVendaVender" type="javax.swing.JButton" visibility="private"/>
+        <Field name="buttonGroup1" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="checkboxVendaDesconto" type="javax.swing.JCheckBox" visibility="private"/>
+        <Field name="comboBoxProdutoCategoria" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="comboBoxUsuarioPerfil" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="comboBoxVendaPesquisarProdutoPelaCategoria" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="comboBoxVendaProduto" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="dialogCategoria" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogCliente" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogProduto" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogUsuario" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="dialogVenda" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton14" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton15" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel19" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel20" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel21" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel22" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel23" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel24" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel25" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel26" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel27" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel28" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel29" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel30" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel31" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel32" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel33" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel34" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel35" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel36" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel37" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel38" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel39" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel40" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel41" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel42" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel43" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel44" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel45" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel46" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel47" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel48" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel49" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel50" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel51" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel52" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel53" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel0" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel10" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel11" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel12" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel13" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel14" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel15" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel16" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel17" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel18" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel19" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel20" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel21" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel22" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel23" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel24" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel4" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel5" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel6" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel7" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel8" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel9" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane3" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane4" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane5" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane6" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane7" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jScrollPane8" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator3" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator4" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator5" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator6" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator7" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jTextField3" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField5" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="labelCategoriaMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelClienteMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelDashboardBemvidoUsuario" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelHomeCliente" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelHomeProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelHomeVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelP" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelProdutoMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelUsuarioLogadoId" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelUsuarioMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaDesconto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaNomeDoProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaPrecoDoProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaQuantidadeDoProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaTotalDaVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaTroco" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="labelVendaValorPago" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="panelBody" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelCliente" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelHome" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelProduto" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelUsuarios" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="panelVendas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="radioBotaoUsuarioActivo" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="radioBotaoUsuarioDesativo" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="tabelaCategoria" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaCliente" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaProduto" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaUsuario" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaVendRegistro" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tabelaVenda" type="javax.swing.JTable" visibility="private"/>
+        <Field name="txtCategoriaDescricao" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtCategoriaId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtCategoriaNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteEndereco" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtClienteTelefone" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoDescricao" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="txtProdutoId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoPesquisar" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoPreco" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtProdutoQuantidade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtUsuarioId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsuarioNome" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsuarioPesquisar" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtUsuarioSenha" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="txtUsuarioUsername" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaCliente" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaDesconto" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaId" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaPesquisarProduto" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txtVendaQuantidade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="txtVendaValorPago" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="eventosDashboard" returnType="void" visibility="private"/>
+        <Method name="eventoUsuario" returnType="void" visibility="private"/>
+        <Method name="eventoProduto" returnType="void" visibility="private"/>
+        <Method name="eventoVenda" returnType="void" visibility="private"/>
+        <Method name="eventoCategoria" returnType="void" visibility="private"/>
+        <Method name="eventoCliente" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="botaoDashboardHomeMouseDragged" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardUsuarioActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardProdutosActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardHomeActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="botaoDashboardVendasActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="comboBoxProdutoCategoriaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="comboBoxVendaPesquisarProdutoPelaCategoriaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="txtVendaDescontoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getBotaoDashboardHome" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardProdutos" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardClientes" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardVendas" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardUsuarios" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoDashboardSair" returnType="JButton" visibility="public"/>
+        <Method name="getPanelHome" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelBody" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelProduto" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelCliente" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelVenda" returnType="JPanel" visibility="public"/>
+        <Method name="getPanelUsuario" returnType="JPanel" visibility="public"/>
+        <Method name="getTabelaUsuarios" returnType="JTable" visibility="public"/>
+        <Method name="getLabelBenvindoUsuario" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelUsuarioLogadoId" returnType="JLabel" visibility="public"/>
+        <Method name="getBotaoUsuarioAdicionar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoUsuarioEditar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoUsuarioApagar" returnType="JButton" visibility="public"/>
+        <Method name="getDialogUsuario" returnType="JDialog" visibility="public"/>
+        <Method name="getComboBoxUsuarioPerfil" returnType="JComboBox" visibility="public"/>
+        <Method name="getTxtUsuarioId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtUsuarioNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtUsuarioSenha" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtUsuarioUsername" returnType="JTextField" visibility="public"/>
+        <Method name="getRadioBotaoActivo" returnType="JRadioButton" visibility="public"/>
+        <Method name="getRadioBotaoDesativo" returnType="JRadioButton" visibility="public"/>
+        <Method name="getLabelUsuarioMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTxtUsuarioPesquisar" returnType="JTextField" visibility="public"/>
+        <Method name="getBotaoCategoriaSalvar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoCategoriaCancelar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoCategoriaApagar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoCategoriaLimpar" returnType="JButton" visibility="public"/>
+        <Method name="getTxtCategoriaId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtCategoriaNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtCategoriaDescricao" returnType="JTextArea" visibility="public"/>
+        <Method name="getTabelaCategoria" returnType="JTable" visibility="public"/>
+        <Method name="getDialogProduto" returnType="JDialog" visibility="public"/>
+        <Method name="getBotaoProdutoAdicionarCategoria" returnType="JButton" visibility="public"/>
+        <Method name="getDialogCategoria" returnType="JDialog" visibility="public"/>
+        <Method name="getBotaoProdutoAdicionar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoProdutoEditar" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoProdutoApagar" returnType="JButton" visibility="public"/>
+        <Method name="getLabelCategoriaMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getComboBoxProdutoCategoria" returnType="JComboBox" visibility="public"/>
+        <Method name="getTxtProdutoId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtProdutoNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtProdutoPreco" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtProdutoQuantidade" returnType="JSpinner" visibility="public"/>
+        <Method name="getTxtProdutoDescricao" returnType="JTextArea" visibility="public"/>
+        <Method name="getLabelProdutoMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTabelaProduto" returnType="JTable" visibility="public"/>
+        <Method name="getTxtProdutoPesquisar" returnType="JTextField" visibility="public"/>
+        <Method name="getDialogVenda" returnType="JDialog" visibility="public"/>
+        <Method name="getLabelVendaPrecoDoProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaQuantidadeDoProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaNomedeDoProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getTxtVendaPesquisarProduto" returnType="JTextField" visibility="public"/>
+        <Method name="getComboBoxVendaPesquisarProdutoPelaCategoria" returnType="JComboBox" visibility="public"/>
+        <Method name="getComboBoVendaProduto" returnType="JComboBox" visibility="public"/>
+        <Method name="getLabelVendaMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTabelaVendaRegistro" returnType="JTable" visibility="public"/>
+        <Method name="getTxtVendaId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtVendaQuantidade" returnType="JSpinner" visibility="public"/>
+        <Method name="getTxtVendaValorPago" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtVendaDesconto" returnType="JTextField" visibility="public"/>
+        <Method name="getLabelVendaTotalDaVenda" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaValorPago" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaTotalDoDesconto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelVendaTroco" returnType="JLabel" visibility="public"/>
+        <Method name="getCheckBoxVendaDesconto" returnType="JCheckBox" visibility="public"/>
+        <Method name="getLabelClienteMensagem" returnType="JLabel" visibility="public"/>
+        <Method name="getTxtClienteId" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtClienteNome" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtClienteTelefone" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtClienteEndereco" returnType="JTextField" visibility="public"/>
+        <Method name="getDialogCliente" returnType="JDialog" visibility="public"/>
+        <Method name="getTxtVendaCliente" returnType="JTextField" visibility="public"/>
+        <Method name="getTabelaVenda" returnType="JTable" visibility="public"/>
+        <Method name="getBotaoVendaDetalhes" returnType="JButton" visibility="public"/>
+        <Method name="getLabelHomeProduto" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelHomeCliente" returnType="JLabel" visibility="public"/>
+        <Method name="getLabelHomeVenda" returnType="JLabel" visibility="public"/>
+        <Method name="getTabelaCliente" returnType="JTable" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginForm" package="com.ralu.gestaovenda.view.formulario" visibility="public" xPosition="634.0" yPosition="20.0">
+      <Fields>
+        <Field name="autenticacaoController" type="AutenticacaoController" visibility="private"/>
+        <Field name="botaoLoginCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="botaoLoginLogin" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jSeparator1" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="jSeparator2" type="javax.swing.JSeparator" visibility="private"/>
+        <Field name="labelLoginMensagem" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txtLoginSenha" type="javax.swing.JPasswordField" visibility="private"/>
+        <Field name="txtLoginUsername" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="eventos" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getTxtLoginUsername" returnType="JTextField" visibility="public"/>
+        <Method name="getTxtLoginSenha" returnType="JTextField" visibility="public"/>
+        <Method name="getBotaoLoginLogin" returnType="JButton" visibility="public"/>
+        <Method name="getBotaoLoginCancelar" returnType="JButton" visibility="public"/>
+        <Method name="getLabelLoginMensagem" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
