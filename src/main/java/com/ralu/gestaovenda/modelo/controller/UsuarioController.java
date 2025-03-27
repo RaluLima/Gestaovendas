@@ -22,6 +22,7 @@ import com.ralu.gestaovenda.modelo.util.UsuarioTableModel;
 import com.ralu.gestaovenda.view.formulario.Dashboard;
 
 
+
 public class UsuarioController implements ActionListener, MouseListener, KeyListener{
     
     private Dashboard dashboard;
@@ -251,7 +252,6 @@ public class UsuarioController implements ActionListener, MouseListener, KeyList
             
             actualizarTabelaUsuario(usuariosTemp);
         }
-        
     }
 
 }

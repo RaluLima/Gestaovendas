@@ -431,7 +431,7 @@ public class VendaController extends AbstractMouseListener implements ActionList
     
     private void limparCampo() {
         this.dashboard.getTxtVendaQuantidade().setValue(1);
-        this.dashboard.getTxtVendaDesconto().setText("1");
+        this.dashboard.getTxtVendaDesconto().setText("0");
         this.dashboard.getTxtVendaValorPago().setText("");
         this.dashboard.getTxtVendaPesquisarProduto().setText("");
         this.dashboard.getTxtVendaId().setText("0");
