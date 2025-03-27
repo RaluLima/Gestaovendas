@@ -1,0 +1,77 @@
+Introdução ao Programa GESTÃO-DE-VENDAS
+Como usar
+Ao abrir o programa, haverá uma tela de login.
+Para o primeiro acesso, utilize o seguinte login: "ADMIN" e senha "ADMIN".
+Como utilizar o programa
+Ao iniciar, aparecerá a tela inicial com um painel interativo.
+________________________________________
+HOME
+Tela inicial mostrando "PRODUTOS", "CLIENTES" e "VENDAS".
+________________________________________
+PRODUTOS
+Na tela de produtos, temos as seguintes opções:
+Como criar categorias:
+Ao clicar em PRODUTOS, haverá a opção "Adicionar". Com essa opção selecionada, ao lado da "Categoria" há um ícone com o símbolo de mais ("+").
+Nessa tela, será possível inserir o ID, nome e descrição da categoria.
+Como criar um produto:
+Ao clicar na aba "Adicionar", aparecerão os seguintes campos: ID, Nome, Preço, Quantidade (quantidade disponível em estoque) e Descrição. Além disso, será possível selecionar a Categoria onde o produto será cadastrado.
+Após preencher os dados, clique em Salvar para concluir o cadastro ou em Cancelar para desistir da operação.
+Editar produto:
+Ao pressionar o botão Editar, será possível modificar os dados do produto selecionado, como Categoria, Preço, Nome e Descrição.
+Após as alterações, clique em Salvar para confirmar ou em Cancelar para descartar as modificações.
+Apagar produto:
+Ao selecionar um item e clicar em Apagar, o produto será removido do sistema.
+________________________________________
+CLIENTES
+Adicionar cliente:
+Ao clicar no botão Adicionar, será possível cadastrar um cliente informando ID, Nome, Telefone e Endereço.
+Clique em Salvar para concluir ou em Cancelar para cancelar a operação.
+Editar cliente:
+Ao clicar no botão Editar, será possível modificar as informações do cliente selecionado (Nome, Telefone ou Endereço).
+Apagar cliente:
+Ao selecionar o botão Apagar, o cliente será removido do sistema.
+________________________________________
+VENDAS
+Adicionar venda:
+Ao clicar no botão Adicionar, será possível registrar uma nova venda.
+•	ID: Código da venda.
+•	Pesquisar produto: Permite localizar rapidamente um produto.
+•	Categoria: Selecione a categoria do produto.
+•	Produto: Escolha o produto a ser vendido.
+•	Quantidade: Informe a quantidade desejada (apenas disponível em estoque).
+•	Desconto: Insira o valor do desconto aplicado à venda.
+•	Valor Pago: Informe o valor pago pelo cliente.
+•	Buscar Cliente: Digite o nome do cliente para associá-lo à venda.
+Outras ações da tela de vendas:
+•	Limpar: Limpa os campos da venda.
+•	Adicionar: Adiciona o produto à venda.
+•	Remover: Remove um produto da venda.
+•	Finalizar Venda: Conclui a venda e registra no sistema.
+•	Cancelar: Cancela a operação de venda.
+Editar venda:
+Permite modificar as informações de uma venda já registrada.
+Apagar venda:
+Remove a venda do sistema.
+Detalhes da venda:
+Exibe todas as informações detalhadas da venda selecionada.
+________________________________________
+USUÁRIOS
+Adicionar usuário:
+Permite cadastrar um novo usuário no sistema, podendo ser do tipo "ADMIN" (Administrador) ou "PADRÃO" (Vendedor).
+Observação: Apenas usuários ADMIN podem realizar alterações na aplicação. Usuários PADRÃO podem apenas realizar vendas.
+Cadastro de usuário:
+Ao clicar no botão Adicionar, será exibida a tela de Registro de Usuário, onde será possível inserir os seguintes dados:
+•	ID
+•	Nome
+•	Username (nome de exibição no sistema)
+•	Senha (para login)
+•	Perfil: Escolha entre ADMIN ou PADRÃO
+•	Estado: Selecione ATIVO para usuários ativos no sistema ou DESATIVADO para usuários inativos.
+Após preencher os dados, clique em Salvar para concluir o cadastro ou em Cancelar para cancelar a operação.
+Editar usuário:
+Permite modificar os dados de um usuário cadastrado, incluindo Nome, Username, Senha, Tipo de Perfil (ADMIN ou PADRÃO) e Estado (ATIVO ou DESATIVADO).
+Apagar usuário:
+Remove um usuário do sistema. Apenas usuários ADMIN podem excluir usuários.
+________________________________________
+SAIR
+Encerra o programa.
