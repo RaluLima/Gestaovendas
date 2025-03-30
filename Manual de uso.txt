@@ -48,10 +48,6 @@ Outras ações da tela de vendas:
 •	Remover: Remove um produto da venda.
 •	Finalizar Venda: Conclui a venda e registra no sistema.
 •	Cancelar: Cancela a operação de venda.
-Editar venda:
-Permite modificar as informações de uma venda já registrada.
-Apagar venda:
-Remove a venda do sistema.
 Detalhes da venda:
 Exibe todas as informações detalhadas da venda selecionada.
 ________________________________________

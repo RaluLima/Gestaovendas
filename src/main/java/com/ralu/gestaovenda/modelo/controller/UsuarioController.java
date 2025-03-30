@@ -213,6 +213,8 @@ public class UsuarioController implements ActionListener, MouseListener, KeyList
     @Override
     public void mouseClicked(MouseEvent me) {
         int linhaSelecionada = this.dashboard.getTabelaUsuarios().getSelectedRow();
+        System.out.println(String.format("Linha selecionada: %s", linhaSelecionada));
+
         this.usuario = usuarioTableModel.getUsuarios().get(linhaSelecionada);
     }
 

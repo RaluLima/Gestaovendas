@@ -80,6 +80,8 @@ public class VendaController extends AbstractMouseListener implements ActionList
             case "vender": vender(); break;
             case "cancelar": cancelar(); break;
             case "detalhes": detalhes(); break;
+            case "editar": editar(); break;
+            case "apagar": apagar(); break;
         }
     }
 
@@ -295,10 +297,12 @@ public class VendaController extends AbstractMouseListener implements ActionList
             System.out.println(String.format("Error: ", e));
         }
         try {
-            int linhaSelecionada = this.dashboard.getTabelaVendaRegistro().getSelectedRow();
-            this.nomeDoProduto = (String) this.dashboard.getTabelaVendaRegistro().getModel().getValueAt(linhaSelecionada, 0);
+            int linhaSelecionada = this.dashboard.getTabelaVenda().getSelectedRow();
+            this.nomeDoProduto =  this.dashboard.getTabelaVenda().getModel().getValueAt(linhaSelecionada, 0).toString();
+
             
         } catch (Exception e) {
+            System.out.println(String.format("Error: ", e));
             System.out.println(String.format("Error registro: %s", e));
         }
     }
@@ -391,6 +395,59 @@ public class VendaController extends AbstractMouseListener implements ActionList
         limparCampo();
         this.dashboard.getDialogVenda().setVisible(false);
     }
+
+    private void editar() {
+        // Implement the logic for editing a sale here
+        if (vendaDetalhes != null && !vendaDetalhes.isEmpty()) {
+        Venda venda = vendaDetalhes.get(0).getVenda();
+
+        // Preenche os campos da tela com os dados da venda
+        this.dashboard.getTxtVendaId().setText(venda.getId().toString());
+        this.dashboard.getTxtVendaCliente().setText(venda.getCliente().getId().toString());
+        this.dashboard.getTxtVendaValorPago().setText(venda.getValorPago().toString());
+        this.dashboard.getLabelVendaTroco().setText(venda.getTroco().toString());
+        this.dashboard.getLabelVendaTotalDaVenda().setText(venda.getTotalVenda().toString());
+        this.dashboard.getLabelVendaTotalDoDesconto().setText(venda.getDesconto().toString());
+
+        this.vendaDetalhesCesto = new HashMap<>();
+        for (VendaDetalhes detalhe : vendaDetalhes) {
+            this.vendaDetalhesCesto.put(detalhe.getProduto().getNome(), detalhe);
+        }
+
+        actualizarCesto(vendaDetalhesCesto);
+        actualizarTotalDaVenda();
+
+        this.dashboard.getDialogVenda().pack();
+        this.dashboard.getDialogVenda().setLocationRelativeTo(dashboard);
+        this.dashboard.getDialogVenda().setVisible(true);
+    } else {
+        JOptionPane.showMessageDialog(dashboard, "Deves selecionar uma venda na tabela", "Seleciona uma venda", 0);
+    }
+}
+       
+private void apagar() {
+    if (vendaDetalhes != null && !vendaDetalhes.isEmpty()) {
+        Venda venda = vendaDetalhes.get(0).getVenda();
+
+        int confirm = JOptionPane.showConfirmDialog(dashboard,
+                String.format("Tens certeza que desejas apagar a venda ID %d?", venda.getId()),
+                "Confirmar Exclusão", JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            String mensagem = vendaDao.deleteVendaPeloId(venda.getId());
+
+            if (mensagem.startsWith("Venda apagada")) {
+                mensagemNaTela(mensagem, Color.GREEN);
+                actualizarTabelaVenda();
+                vendaDetalhes = null;
+            } else {
+                mensagemNaTela(mensagem, Color.RED);
+            }
+        }
+    } else {
+        JOptionPane.showMessageDialog(dashboard, "Deves selecionar uma venda na tabela", "Seleciona uma venda", 0);
+    }
+}
 
     private void detalhes() {
         if(this.vendaDetalhes != null) {

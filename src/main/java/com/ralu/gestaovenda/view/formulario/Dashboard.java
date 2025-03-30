@@ -85,7 +85,9 @@ public class Dashboard extends javax.swing.JFrame {
         txtProdutoPesquisar.addKeyListener(produtoController);
     }
     
+
     private void eventoVenda() {
+        botaoVendaAdicionar.addActionListener(vendaController);
         botaoVendaAdicionar.addActionListener(vendaController);
         botaoVendaCancelar.addActionListener(vendaController);
         botaoVendaLimpar.addActionListener(vendaController);
@@ -93,7 +95,7 @@ public class Dashboard extends javax.swing.JFrame {
         botaoVendaResgistroAdicionar.addActionListener(vendaController);
         botaoVendaVender.addActionListener(vendaController);
         botaoVendaDetalhes.addActionListener(vendaController);
-        
+    
         comboBoxVendaProduto.addActionListener(vendaController);
         comboBoxVendaPesquisarProdutoPelaCategoria.addActionListener(vendaController);
         txtVendaPesquisarProduto.addKeyListener(vendaController);
@@ -883,7 +885,6 @@ public class Dashboard extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(botaoVendaResgistroAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(botaoVendaRegistroRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(botaoVendaVender, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1025,7 +1026,6 @@ public class Dashboard extends javax.swing.JFrame {
                     .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(botaoVendaVender)
                         .addComponent(botaoVendaResgistroAdicionar)
-                        .addComponent(botaoVendaRegistroRemover)
                         .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel23Layout.createSequentialGroup()
@@ -1709,11 +1709,7 @@ public class Dashboard extends javax.swing.JFrame {
         botaoVendaAdicionar.setText("Adicionar");
         jPanel19.add(botaoVendaAdicionar);
 
-        jButton14.setText("Editar");
-        jPanel19.add(jButton14);
 
-        jButton15.setText("Apagar");
-        jPanel19.add(jButton15);
 
         botaoVendaDetalhes.setText("Detalhes");
         jPanel19.add(botaoVendaDetalhes);
